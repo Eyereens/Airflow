@@ -12,29 +12,9 @@ import os
 from airflow.decorators import dag, task
 from airflow.operators.python import get_current_context
 
-class Getch:
-    def __init__(self, query, db='simulator'):
-        self.connection = {
-            'host': 'https://clickhouse.lab.karpov.courses',
-            'password': '_________',
-            'user': 'student',
-            'database': db,
-        }
-        self.query = query
-        self.getchdf
-
-    @property
-    def getchdf(self):
-        try:
-            self.df = pandahouse.read_clickhouse(self.query, connection=self.connection)
-
-        except Exception as err:
-            print("\033[31m {}".format(err))
-            exit(0)
-
 connection = {
     'host': 'https://clickhouse.lab.karpov.courses',
-    'password': 'dpo_python_2020',
+    'password': '______',
     'user': 'student',
     'database': 'simulator_20220920'
 }
